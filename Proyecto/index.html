@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchy Match - Encuentra tu Match</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="dotted-container">
+            <h1> ¡Encuenta tu match!</h1>
+            <form action="">
+                <label for="photo"> Sube tu foto</label>
+                <input type="file" name="photo" accept="image/*" required />
+
+                <label for="first-name">Tu nombre</label>
+                <input type="text" id="first-name" name="first-name" />
+
+                <label for="last-name">Tu apellido</label>
+                <input type="text" id="last-name" name="last-name" />
+
+                <label for="email">Tu correo electrónico</label>
+                <input type="text" id="email" name="email" />
+
+                <label for="first-name">Tu nombre</label>
+                <input type="text" id="first-name" name="first-name" />
+
+                <label for="gender">Tu género</label>
+                <select for="gender" name="gender" required>
+                    <option value="male">Hombre</option>
+                    <option value="female">Mujer</option>
+                    <option value="other">Otro</option>
+                </select>
+
+                <fieldset>
+                    <legend>¿En qué estás interesado?</legend>
+                    <div class="checkbox-group">
+                        <label for="interest">Hombre</label>
+                        <input type="checkbox" name="interest" value="men">
+                        <label for="interest">Mujer</label>
+
+                    </div>
+                </fieldset>
+
+                <label for="nationality">Nacionalidad de tu otra mitad</label>
+                <select name="nationality" id="nationality">
+                    <option value="" disabled></option>
+                </select>
+
+                <button type="submit" class="button">Voy a tener suerte</button>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+
+</html>
