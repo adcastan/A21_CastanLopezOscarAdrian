@@ -26,8 +26,6 @@ window.onload = function () {
     const form = this.document.getElementsByTagname("form");
     const inputs = form[0].getElementsByTagname("input");
     const selects = form[0].getElementsByTagname("select");
-    const labels = this.document.getElementById("label")
-
     for (let input of inputs) {
         input.onfocus = resaltar;
 
@@ -39,6 +37,8 @@ window.onload = function () {
 
         select.addEventListener('blur', resaltarDesresaltar);
     }
+
+    
 
     llenarNacionalidad();
 
@@ -69,4 +69,19 @@ function noResaltar(evento) {
 
 function resaltarDesresaltar(evento) {
     evento.target.classList.toggle("selected");
+}
+
+ function validarCampoVacio() {
+  var dato = document.forms["form"].value;
+  if (dato == "") {
+    alert("No se debe dejar ningún campo vacío");
+    return false;
+  }
+}
+
+function labelColor(label){
+if(document.frmTest.text1.value == "")
+{
+document.all(label).style.color = "red";
+}
 }
