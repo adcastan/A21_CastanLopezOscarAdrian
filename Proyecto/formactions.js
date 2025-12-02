@@ -1,7 +1,32 @@
+const NACIONALIDADES_ACEPTADAS = [
+    {key: 'AU', name: "Australia"},
+    {key: 'BR', name: "Brasil"},
+    {key: 'CA', name: "Canadá"},
+    {key: 'CH', name: "Suiza"},
+    {key: 'DE', name: "Alemania"},
+    {key: 'DK', name: "Dinamarca"},
+    {key: 'ES', name: "España"},
+    {key: 'FI', name: "Finlandia"},
+    {key: 'FR', name: "Francia"},
+    {key: 'GB', name: "Reino Unido"},
+    {key: 'IE', name: "Irlanda"},
+    {key: 'IN', name: "India"},
+    {key: 'IR', name: "Irán"},
+    {key: 'MX', name: "México"},
+    {key: 'NL', name: "Países Bajos"},
+    {key: 'NO', name: "Noruega"},
+    {key: 'NZ', name: "Nueva Zelanda"},
+    {key: 'RS', name: "Serbia"},
+    {key: 'TR', name: "Turquía"},
+    {key: 'UA', name: "Ucrania"},
+    {key: 'US', name: "Brasil"},
+];
+
 window.onload = function () {
     const form = this.document.getElementsByTagname("form");
     const inputs = form[0].getElementsByTagname("input");
-    const selects = form[0].getElementsByTagname("selects");
+    const selects = form[0].getElementsByTagname("select");
+    const labels = this.document.getElementById("label")
 
     for (let input of inputs) {
         input.onfocus = resaltar;
