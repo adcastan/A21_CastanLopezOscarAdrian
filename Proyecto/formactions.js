@@ -79,9 +79,14 @@ function resaltarDesresaltar(evento) {
   }
 }
 
-function labelColor(label){
-if(document.frmTest.text1.value == "")
-{
-document.all(label).style.color = "red";
-}
+function labelColor(){
+    var form = this.document.getElementsByTagName("form");
+    var labels = form[0].getElementsByTagName("label");
+
+    for(label of labels){
+        label.addEventListener('hover',function(){
+            label.style.color='red';
+        });
+
+    }
 }
